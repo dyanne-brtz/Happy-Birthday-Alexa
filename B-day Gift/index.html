@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Happy 18th Birthday, Bestie!</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <audio id="music" loop>
+
+        <source src="music/Best Friend - ANDREAH [Lyrics].mp3" type="audio/mpeg">
+    </audio>
+    
+    <button id="musicBtn" onclick="toggleMusic()">♫ Music</button>
+
+    <section class="page active" id="page1">
+        <div class="bear">ʕ •ᴥ• ʔ</div>
+        <p class="small-title">A LITTLE GIFT FOR YOU</p>
+        <h1>Happy 18th Birthday,<br>
+            <span>My Bestie!</span>
+        </h1>
+        <p>13 years of friendship, laughter, and memories. ♡</p>
+        <button class="pink-btn" onclick="startGift()">Open Your Gift ♡</button>
+    </section>
+
+    <section class="page" id="page2">
+        <div class="card">
+            <div class="bear">ʕ♡ᴥ♡ʔ</div>
+            <h1>One Little Secret</h1>
+            <p>Enter our special 4-digit code!</p>
+
+            <input type="password" id="password"
+                   maxlength="4" placeholder="••••"
+                   inputmode="numeric">
+
+            <button class="pink-btn" onclick="checkPassword()">
+                Unlock My Gift ♡
+            </button>
+
+            <p id="error"></p>
+        </div>
+    </section>
+
+    <section class="page" id="page3">
+        <p class="small-title">OUR LITTLE WORLD</p>
+        <h1>13 Years of <span>Us ♡</span></h1>
+        <p>Growing up with you is one of my favorite things.</p>
+
+        <div class="gallery">
+            <img src="photos/photo1.jpg" alt="Our memory">
+            <img src="photos/photo2.jpg" alt="Our memory">
+            <img src="photos/photo3.jpg" alt="Our memory">
+            <img src="photos/photo4.jpg" alt="Our memory">
+            <img src="photos/photo5.jpg" alt="Our memory">
+        </div>
+
+        <div class="video-card">
+            <h2>A Little Memory Replay 🎀</h2>
+            <video controls playsinline>
+                <source src=video/our-video.mp4" type="video/mp4">
+                Your browser does not support this video.
+            </video>
+        </div>
+
+        <button class="pink-btn" onclick="showPage(4)">
+            Next Surprise ♡
+        </button>
+    </section>
+
+    <section class="page" id="page4">
+        <p class="small-title">A BOUQUET FOR YOU</p>
+        <h1>Flowers for <span>My Girl</span></h1>
+
+        <div class="bouquet">🌸 🌷 🌸<br>🌷 💐 🌷</div>
+
+        <p>Tap each little message, birthday girl.</p>
+
+        <div class="message-buttons">
+            <button onclick="showMessage('I love you so much, bestie! ♡')">
+                I LOVE YOU
+            </button>
+            <button onclick="showMessage('I am so proud of the person you are becoming.')">
+                I'M PROUD OF YOU
+            </button>
+            <button onclick="showMessage('Thank you for being my sister by heart.')">
+                THANK YOU
+            </button>
+            <button onclick="showMessage('No matter what happens, I am always here for you.')">
+                I'M HERE FOR YOU
+            </button>
+        </div>
+
+        <div class="message-box" id="messageBox">
+            Choose a message ♡
+        </div>
+
+        <button class="pink-btn" onclick="showPage(5)">
+            A Letter for You 💌
+        </button>
+    </section>
+
+    <section class="page" id="page5">
+        <div class="letter">
+            <p class="small-title">A LETTER FROM YOUR BEST FRIEND</p>
+            <h1>Dear <span>Bestie,</span></h1>
+
+            <p>
+                Happy 18th birthday to my best friend, my sister by heart,
+                and one of the biggest blessings in my life.
+            </p>
+
+            <p>
+                Thirteen years. Can you believe that? We've spent so many
+                years growing up together, making memories, laughing at
+                random things, and going through different chapters of life.
+                And honestly, I'm so grateful that I got to experience
+                those years with you.
+            </p>
+
+            <p>
+                I hope you know how much I appreciate you. You're not just
+                a friend to me anymore. You're family. You're the sister
+                I got to choose, and no words could ever fully explain
+                how thankful I am to have you in my life.
+            </p>
+
+            <p>
+                As you turn 18, I hope life gives you more reasons to smile,
+                more opportunities to grow, and people who love and
+                appreciate you the way you deserve. Don't ever feel like
+                you have to figure everything out all at once. It's okay
+                to make mistakes, to rest, and to take your time.
+            </p>
+
+            <p>
+                Even when we get older and life becomes busier, I hope
+                you remember that you'll always have me. I'll be here
+                to listen to your stories, celebrate your wins, comfort
+                you on your hard days, and make more memories with you.
+            </p>
+
+            <p>
+                Thank you for these 13 beautiful years of friendship.
+                If I could choose my best friend all over again,
+                I'd still choose you.
+            </p>
+
+            <p class="special">
+                I love you endlessly, bestie. Happy 18th birthday!
+                Here's to more years of us. ♡
+            </p>
+
+            <p class="signature">
+                Always your best friend,<br>
+                <strong>Your sister by heart ♡</strong>
+            </p>
+        </div>
+
+        <button class="pink-btn" onclick="showPage(6)">
+            One Last Surprise 🎂
+        </button>
+    </section>
+
+    <section class="page" id="page6">
+        <p class="small-title">MAKE A WISH, BIRTHDAY GIRL</p>
+        <h1>Here's to <span>Your 18th!</span></h1>
+
+        <div class="cake" onclick="makeWish()">
+            <div class="flame" id="flame">♥</div>
+            <div class="candle"></div>
+            <div class="icing"></div>
+            <div class="cake-top"></div>
+            <div class="cake-bottom"></div>
+            <div class="plate"></div>
+        </div>
+
+        <p id="wish">Tap the cake and make a wish! ♡</p>
+
+        <button class="pink-btn" onclick="showPage(1)">
+            Replay Our Gift ↻
+        </button>
+    </section>
+
+    <script>
+        const PASSCODE = "1005";
+
+        function showPage(number) {
+            document.querySelectorAll(".page").forEach(page => {
+                page.classList.remove("active");
+            });
+
+            document.getElementById("page" + number)
+                .classList.add("active");
+
+            window.scrollTo({ top: 0, behavior: "smooth" });
+        }
+
+        function startGift() {
+            const music = document.getElementById("music");
+
+            music.volume = 0.4;
+            music.play().catch(() => {});
+
+            showPage(2);
+        }
+
+        function checkPassword() {
+            const entered = document.getElementById("password").value;
+            const error = document.getElementById("error");
+
+            if (entered === PASSCODE) {
+                error.textContent = "";
+                showPage(3);
+            } else {
+                error.textContent = "Try again, bestie! ♡";
+                document.getElementById("password").value = "";
+            }
+        }
+
+        function toggleMusic() {
+            const music = document.getElementById("music");
+
+            if (music.paused) {
+                music.play().catch(() => {});
+            } else {
+                music.pause();
+            }
+        }
+
+        function showMessage(message) {
+            document.getElementById("messageBox").textContent = message;
+        }
+
+        function makeWish() {
+            document.getElementById("flame").style.opacity = "0";
+            document.getElementById("wish").textContent =
+                "Happy 18th, my bestie! May this year bring you all the happiness you deserve. I love you! ♡";
+        }
+
+        for (let i = 0; i < 20; i++) {
+            const heart = document.createElement("span");
+            heart.className = "floating-heart";
+            heart.textContent = "♡";
+            heart.style.left = Math.random() * 100 + "%";
+            heart.style.animationDuration = (7 + Math.random() * 8) + "s";
+            heart.style.animationDelay = Math.random() * 8 + "s";
+            document.body.appendChild(heart);
+        }
+    </script>
+</body>
+</html>
